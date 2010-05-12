@@ -18,9 +18,12 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+// - (BOOL)application:(UIApplication *)applicationDidFinishLaunching {    
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
     
-    // Override point for customization after app launch. 
+    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    viewController = [[iManaitaViewController alloc] init];
+    
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
 
