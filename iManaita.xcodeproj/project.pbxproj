@@ -14,6 +14,7 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* iManaitaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iManaitaViewController.m */; };
 		5027D66B1199876B00482B7A /* maple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5027D66A1199876B00482B7A /* maple.jpg */; };
+		5027D764119C389100482B7A /* carrot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5027D763119C389100482B7A /* carrot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iManaita_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iManaita_Prefix.pch; sourceTree = "<group>"; };
 		5027D66A1199876B00482B7A /* maple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maple.jpg; sourceTree = "<group>"; };
+		5027D763119C389100482B7A /* carrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrot.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iManaita-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iManaita-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +81,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5027D66A1199876B00482B7A /* maple.jpg */,
 				32CA4F630368D1EE00C91783 /* iManaita_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -89,6 +90,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5027D66A1199876B00482B7A /* maple.jpg */,
+				5027D763119C389100482B7A /* carrot.png */,
 				8D1107310486CEB800E47090 /* iManaita-Info.plist */,
 			);
 			name = Resources;
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5027D66B1199876B00482B7A /* maple.jpg in Resources */,
+				5027D764119C389100482B7A /* carrot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
