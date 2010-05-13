@@ -12,7 +12,7 @@
 @implementation iManaitaAppDelegate
 
 @synthesize window;
-@synthesize viewController;
+@synthesize ingredients;
 
 
 #pragma mark -
@@ -24,8 +24,8 @@
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [window addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maple.jpg"]]];
 
-    viewController = [[IngredientsViewController alloc] init];
-    [window addSubview:viewController.view];
+    ingredients = [[IngredientsViewController alloc] init];
+    [window addSubview:ingredients.view];
 
     [window makeKeyAndVisible];
 
@@ -67,7 +67,7 @@
 
 
 - (void)dealloc {
-    [viewController release];
+    [ingredients release];
     [window release];
     [super dealloc];
 }

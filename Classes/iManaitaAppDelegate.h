@@ -12,11 +12,11 @@
 
 @interface iManaitaAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    IngredientsViewController *viewController;
+    IngredientsViewController *ingredients;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet IngredientsViewController *viewController;
+@property (nonatomic, retain) IBOutlet IngredientsViewController *ingredients;
 
 @end
 
