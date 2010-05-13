@@ -1,5 +1,6 @@
 //
-//  iManaitaViewController.h
+//  IngredientsViewController.h
+//  originally iManaitaViewController.h
 //  iManaita
 //
 //  Created by marutanm on 5/11/10.
@@ -8,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface iManaitaViewController : UIViewController {
+@interface IngredientsViewController : UIViewController {
 
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "iManaitaAppDelegate.h"
-#import "iManaitaViewController.h"
+#import "IngredientsViewController.h"
 
 @implementation iManaitaAppDelegate
 
@@ -22,10 +22,11 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    viewController = [[iManaitaViewController alloc] init];
-    
     [window addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maple.jpg"]]];
+
+    viewController = [[IngredientsViewController alloc] init];
     [window addSubview:viewController.view];
+
     [window makeKeyAndVisible];
 
 	return YES;

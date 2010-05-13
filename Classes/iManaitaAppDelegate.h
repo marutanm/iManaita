@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class iManaitaViewController;
+@class IngredientsViewController;
 
 @interface iManaitaAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    iManaitaViewController *viewController;
+    IngredientsViewController *viewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet iManaitaViewController *viewController;
+@property (nonatomic, retain) IBOutlet IngredientsViewController *viewController;
 
 @end
 

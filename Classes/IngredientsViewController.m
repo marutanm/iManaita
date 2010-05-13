@@ -1,14 +1,15 @@
 //
-//  iManaitaViewController.m
+//  IngredientsViewController.m
+//  originally iManaitaViewController.m
 //  iManaita
 //
 //  Created by marutanm on 5/11/10.
 //  Copyright shisobu.in 2010. All rights reserved.
 //
 
-#import "iManaitaViewController.h"
+#import "IngredientsViewController.h"
 
-@implementation iManaitaViewController
+@implementation IngredientsViewController
 
 
 /*
