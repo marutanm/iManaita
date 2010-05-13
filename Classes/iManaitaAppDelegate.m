@@ -24,6 +24,7 @@
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     viewController = [[iManaitaViewController alloc] init];
     
+    [window addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maple.jpg"]]];
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
 

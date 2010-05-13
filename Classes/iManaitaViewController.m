@@ -24,7 +24,7 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
     
-    self.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maple.jpg"]];
+    self.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"carrot.png"]];
 
 }
 
