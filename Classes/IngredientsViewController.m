@@ -25,7 +25,18 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
     
-    self.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"carrot.png"]];
+    UIImageView *ingredients = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"carrot.png"]];
+    ingredients.userInteractionEnabled = YES;
+    self.view = ingredients;
+    [ingredients release];
+
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
+    NSLog(@"touchesBegan");
+
+    self.view = nil;
 
 }
 
