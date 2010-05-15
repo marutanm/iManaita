@@ -18,7 +18,6 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-// - (BOOL)application:(UIApplication *)applicationDidFinishLaunching {    
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -29,7 +28,6 @@
 
     [window makeKeyAndVisible];
 
-	return YES;
 }
 
 
