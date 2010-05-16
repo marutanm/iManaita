@@ -15,6 +15,7 @@
 		28D7ACF80DDB3853001CB0EB /* IngredientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* IngredientsViewController.m */; };
 		5027D66B1199876B00482B7A /* maple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5027D66A1199876B00482B7A /* maple.jpg */; };
 		5027D764119C389100482B7A /* carrot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5027D763119C389100482B7A /* carrot.png */; };
+		5031A7C211A026A500A67C79 /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031A7C111A026A500A67C79 /* BoardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		32CA4F630368D1EE00C91783 /* iManaita_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iManaita_Prefix.pch; sourceTree = "<group>"; };
 		5027D66A1199876B00482B7A /* maple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maple.jpg; sourceTree = "<group>"; };
 		5027D763119C389100482B7A /* carrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrot.png; sourceTree = "<group>"; };
+		5031A7C011A026A500A67C79 /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
+		5031A7C111A026A500A67C79 /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iManaita-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iManaita-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +57,8 @@
 				1D3623250D0F684500981E51 /* iManaitaAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* IngredientsViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* IngredientsViewController.m */,
+				5031A7C011A026A500A67C79 /* BoardViewController.h */,
+				5031A7C111A026A500A67C79 /* BoardViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* iManaitaAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* IngredientsViewController.m in Sources */,
+				5031A7C211A026A500A67C79 /* BoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

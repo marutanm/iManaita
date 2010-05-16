@@ -8,11 +8,12 @@
 
 #import "iManaitaAppDelegate.h"
 #import "IngredientsViewController.h"
+#import "BoardViewController.h"
 
 @implementation iManaitaAppDelegate
 
-@synthesize window;
-@synthesize ingredients;
+// @synthesize window;
+// @synthesize ingredients;
 
 
 #pragma mark -
@@ -21,10 +22,15 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [window addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maple.jpg"]]];
+    // [window addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maple.jpg"]]];
 
-    ingredients = [[IngredientsViewController alloc] init];
+    BoardViewController *board = [[BoardViewController alloc] init];
+    [window addSubview:board.view];
+    [board release];
+
+    IngredientsViewController *ingredients = [[IngredientsViewController alloc] init];
     [window addSubview:ingredients.view];
+    [ingredients release];
 
     [window makeKeyAndVisible];
 
@@ -65,7 +71,7 @@
 
 
 - (void)dealloc {
-    [ingredients release];
+    // [ingredients release];
     [window release];
     [super dealloc];
 }
