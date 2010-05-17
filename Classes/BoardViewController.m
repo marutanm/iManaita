@@ -7,7 +7,7 @@
 //
 
 #import "BoardViewController.h"
-
+#import "IngredientsViewController.h"
 
 @implementation BoardViewController
 
@@ -24,11 +24,18 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 
-    UIImageView *ingredients = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maple.jpg"]];
-    ingredients.userInteractionEnabled = YES;
-    self.view = ingredients;
-    [ingredients release];
+    UIImageView *board = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maple.jpg"]];
+    board.userInteractionEnabled = YES;
+    self.view = board;
+    [board release];
 
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
+    IngredientsViewController *ingredients = [[IngredientsViewController alloc] init];
+    ingredients.view.center = [[touches anyObject] locationInView:self.view]; 
+    [self.view addSubview:ingredients.view];
 }
 
 /*
@@ -41,7 +48,8 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.
-    return YES;
+    // return YES;
+    return NO;
 }
 
 

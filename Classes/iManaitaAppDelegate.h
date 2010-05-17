@@ -7,18 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-// @class IngredientsViewController;
-// @class IngredientsViewController;
+#import "BoardViewController.h"
 
 @interface iManaitaAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    // BoardViewController *board;
-    // IngredientsViewController *ingredients;
 }
-
-// @property (nonatomic, retain) IBOutlet UIWindow *window;
-// @property (nonatomic, retain) IBOutlet IngredientsViewController *ingredients;
 
 @end
 
