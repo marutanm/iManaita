@@ -11,6 +11,9 @@
 
 @interface IngredientsViewController : UIViewController {
 
+	CGPoint startLocation;
+    BOOL draggingView;
+
 }
 
 @end
