@@ -12,6 +12,7 @@
 @interface IngredientsViewController : UIViewController {
 
 	CGPoint startLocation;
+    BOOL touchInside;
     BOOL draggingView;
 
 }

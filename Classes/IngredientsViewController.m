@@ -14,7 +14,7 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
-    
+
     UIImageView *ingredients = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"carrot.png"]];
     ingredients.userInteractionEnabled = YES;
     self.view = ingredients;
@@ -25,7 +25,7 @@
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
+[super viewDidLoad];
 }
 */
 
@@ -38,15 +38,15 @@
 }
 
 - (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
+    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
+
+    // Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
 
 
@@ -60,30 +60,43 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 
-    if (!draggingView) {
+    if (!draggingView && touchInside) {
         self.view = nil;
     }
-    draggingView = NO;
 
 }
 
 - (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
-    
-	startLocation = [[touches anyObject] locationInView:self.view];
-	[[self.view superview] bringSubviewToFront:self.view];
+
+    touchInside = NO;
+    draggingView = NO;
+
+    startLocation = [[touches anyObject] locationInView:self.view.superview];
+    CGPoint ingredientsCenter = self.view.center;
+    NSLog(@"%f", self.view.frame.size.height / 2);
+    NSLog(@"%f", sqrt(pow((startLocation.x - ingredientsCenter.x), 2) + pow((startLocation.y - ingredientsCenter.y), 2))); 
+    if((self.view.frame.size.height / 2) > sqrt(pow((startLocation.x - ingredientsCenter.x), 2) + pow((startLocation.y - ingredientsCenter.y), 2))){
+        touchInside = YES;
+        NSLog(@"touchInside");
+        [[self.view superview] bringSubviewToFront:self.view];
+    }
 
 }
 
 - (void) touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event {
 
-    [self bouneBegin];
-    draggingView = YES;
-	CGPoint pt = [[touches anyObject] locationInView:self.view];
-	CGRect frame = [self.view frame];
-	frame.origin.x += pt.x - startLocation.x;
-	frame.origin.y += pt.y - startLocation.y;
-	[self.view setFrame:frame];
-    [self bouneEnd];
+    if(touchInside) {
+        draggingView = YES;
+        self.view.center = [[touches anyObject] locationInView:self.view.superview];
+        [self bouneBegin];
+        draggingView = YES;
+        CGPoint pt = [[touches anyObject] locationInView:self.view];
+        CGRect frame = [self.view frame];
+        frame.origin.x += pt.x - startLocation.x;
+        frame.origin.y += pt.y - startLocation.y;
+        [self.view setFrame:frame];
+        [self bouneEnd];
+    }
 
 }
 
@@ -104,6 +117,6 @@
     [UIView setAnimationDuration:0.3f];
     self.view.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
     [UIView commitAnimations];
-    
+
 }
 @end
