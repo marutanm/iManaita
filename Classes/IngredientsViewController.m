@@ -24,14 +24,36 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 
+    [self bouneBegin];
+    
+}
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+
+    [self bouneEnd];
+
+}
+
+- (void)bouneBegin {
+
     [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.4f];
     self.view.transform = CGAffineTransformMakeScale(1.15f, 1.15f); 
     [UIView commitAnimations];
-    
+
 }
 
+- (void)bouneEnd {
+
+    [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.3f];
+    self.view.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+    [UIView commitAnimations];
+    
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
