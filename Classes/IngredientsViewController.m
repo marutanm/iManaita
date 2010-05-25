@@ -24,8 +24,12 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 
-    self.view = nil;
-
+    [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.4f];
+    self.view.transform = CGAffineTransformMakeScale(1.15f, 1.15f); 
+    [UIView commitAnimations];
+    
 }
 
 
