@@ -60,6 +60,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 
+    [self bouneEnd];
     if (!draggingView && touchInside) {
         self.view = nil;
     }
@@ -80,6 +81,7 @@
         NSLog(@"touchInside");
         [[self.view superview] bringSubviewToFront:self.view];
     }
+    [self bouneBegin];
 
 }
 
@@ -88,14 +90,6 @@
     if(touchInside) {
         draggingView = YES;
         self.view.center = [[touches anyObject] locationInView:self.view.superview];
-        [self bouneBegin];
-        draggingView = YES;
-        CGPoint pt = [[touches anyObject] locationInView:self.view];
-        CGRect frame = [self.view frame];
-        frame.origin.x += pt.x - startLocation.x;
-        frame.origin.y += pt.y - startLocation.y;
-        [self.view setFrame:frame];
-        [self bouneEnd];
     }
 
 }
