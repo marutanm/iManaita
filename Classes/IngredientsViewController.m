@@ -74,11 +74,8 @@
 
     startLocation = [[touches anyObject] locationInView:self.view.superview];
     CGPoint ingredientsCenter = self.view.center;
-    NSLog(@"%f", self.view.frame.size.height / 2);
-    NSLog(@"%f", sqrt(pow((startLocation.x - ingredientsCenter.x), 2) + pow((startLocation.y - ingredientsCenter.y), 2))); 
     if((self.view.frame.size.height / 2) > sqrt(pow((startLocation.x - ingredientsCenter.x), 2) + pow((startLocation.y - ingredientsCenter.y), 2))){
         touchInside = YES;
-        NSLog(@"touchInside");
         [[self.view superview] bringSubviewToFront:self.view];
     }
     [self bouneBegin];
