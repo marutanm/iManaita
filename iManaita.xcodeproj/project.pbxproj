@@ -16,6 +16,7 @@
 		5027D66B1199876B00482B7A /* maple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5027D66A1199876B00482B7A /* maple.jpg */; };
 		5027D764119C389100482B7A /* carrot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5027D763119C389100482B7A /* carrot.png */; };
 		5031A7C211A026A500A67C79 /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031A7C111A026A500A67C79 /* BoardViewController.m */; };
+		509C87C511AC812500ED132C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 509C87C411AC812500ED132C /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		5027D763119C389100482B7A /* carrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrot.png; sourceTree = "<group>"; };
 		5031A7C011A026A500A67C79 /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
 		5031A7C111A026A500A67C79 /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
+		509C87C411AC812500ED132C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iManaita-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iManaita-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 			children = (
 				5027D66A1199876B00482B7A /* maple.jpg */,
 				5027D763119C389100482B7A /* carrot.png */,
+				509C87C411AC812500ED132C /* icon.png */,
 				8D1107310486CEB800E47090 /* iManaita-Info.plist */,
 			);
 			name = Resources;
@@ -156,6 +159,7 @@
 			files = (
 				5027D66B1199876B00482B7A /* maple.jpg in Resources */,
 				5027D764119C389100482B7A /* carrot.png in Resources */,
+				509C87C511AC812500ED132C /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,11 +198,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ryo Fujita";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iManaita_Prefix.pch;
 				INFOPLIST_FILE = "iManaita-Info.plist";
 				PRODUCT_NAME = iManaita;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EB8A12E-4EB1-413A-AF27-6B44789F0121";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
